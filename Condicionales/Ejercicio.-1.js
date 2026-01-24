@@ -4,10 +4,10 @@ let saldo = 1000
 function cajero(opcion, monto) {
     switch (opcion) {
         case "consultar":
-            console.log("Tu saldo es", monto)
+            console.log("Tu saldo es", saldo)
             break;
-        case depositar:
-            if (monto > 0) {
+        case "depositar":
+            if (saldo > 0) {
                 saldo += monto
                 console.log("Tu saldo es de $", monto)
             }else{
@@ -15,7 +15,7 @@ function cajero(opcion, monto) {
             }
             break;
         case "retirar":
-            if (monto > 0) {
+            if (saldo > 0) {
                 saldo -= monto
                 console.log("Tu saldo es de $", monto)
             }else{
