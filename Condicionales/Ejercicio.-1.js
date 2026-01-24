@@ -8,10 +8,10 @@ function cajero(opcion, monto) {
             break;
         case "depositar":
             if (saldo > 0) {
-                saldo += monto
-                console.log("Tu saldo es de $", monto)
+                saldo += monto;
+                console.log("Has depositado $", monto, ".Saldo actualizado $",saldo)
             } else {
-                console.log("Monto insuficiente")
+                console.log("El monto a depositar debe ser mayor a 0")
             }
             break;
         case "retirar":
