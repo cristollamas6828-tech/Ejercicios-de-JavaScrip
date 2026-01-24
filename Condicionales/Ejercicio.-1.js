@@ -10,24 +10,24 @@ function cajero(opcion, monto) {
             if (saldo > 0) {
                 saldo += monto
                 console.log("Tu saldo es de $", monto)
-            }else{
+            } else {
                 console.log("Monto insuficiente")
             }
             break;
         case "retirar":
-            if (saldo > 0) {
-                saldo -= monto
-                console.log("Tu saldo es de $", monto)
-            }else{
-                console.log("Saldo insuficiente")
+            if (monto > 0 && monto <= saldo) {
+                saldo -= monto;
+                console.log("Retiro exitoso de $",monto," Tu saldo restante es: $",saldo);
+            } else {
+                console.log("Error: Saldo insuficiente. Solo tienes $" + saldo);
             }
             break;
-        default :
-        console.log("Opccion invalidad")
+        default:
+            console.log("Opccion invalidad")
     }
 }
 
-cajero ("consultar")
-cajero("depositar",500)
-cajero("retirar",150)
+cajero("consultar")
+cajero("depositar", 600)
+cajero("retirar", 150)
 
